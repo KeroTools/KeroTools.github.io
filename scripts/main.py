@@ -1,5 +1,5 @@
 import browser
-from /scripts import shards
+import shards
 
 """ STATIC """
 calc_btn = browser.document.getElementById("calc_btn")
