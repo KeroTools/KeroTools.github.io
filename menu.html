@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Roboto">
+
+        <style>
+            body{
+                display: flex;
+                max-width: 80%;
+                background-color: rgb(19, 19, 19);
+                margin:0 0;
+                padding:0;
+                font-family: 'Roboto', serif;
+                font-size: 18px;
+                }   
+
+            .left-corner{
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+            .btn-group button, .dropdown{
+                cursor: pointer; /* Pointer/hand icon */
+                float: left;
+            }
+
+            .btn-group button{
+                top: 0;
+                left: 0;
+                background-color: #04AA6D;
+                color: white;
+                border: 2px solid rgb(247, 247, 247);
+                padding: 10px 24px;
+                font-size: 18px;
+            }
+
+            .btn-group button:hover, button:focus {
+                background-color: #005f03;
+            }
+
+            .btn-group button.dropdown:after {
+                content: "";
+                clear: both;
+                display: table;
+            }
+
+            .btn-group button:not(:last-child) {
+                border-right: none; /* Prevent double borders */
+            }
+
+            .btn-group button:last-child{
+                border-right:2px solid rgb(247, 247, 247);
+            }
+
+            .btn-group button:first-child{
+                background-color: #aa0404;
+            }
+
+            .btn-group button:first-child:hover, button:first-child:focus {
+                background-color: #720000;
+            }
+
+            .btn-group::after {
+                content: "";
+                background-color: #04AA6D;
+                position: relative;
+                clear: both;
+                display: table;
+            }
+
+            .drop-corner {
+                position: relative;
+                left: -30px;
+                top: 10px;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 130px;
+                font-size: 18px;
+                font-weight: 500;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                color: black;
+                padding: 12px 3px;
+                padding-right: 2px;
+                padding-bottom: 16px;
+                text-decoration: none;
+                display: block;
+                max-height: 30px;
+                font-weight: 550;
+            }
+
+            .menu-btn{
+                color: white;
+            }
+
+            .dropdown-content a:hover {background-color: #ddd;}
+
+            .dropdown:hover .dropdown-content {display: block;}
+            .menu-btn:focus .dropdown-content {display: block;}
+
+
+            .dropdown:hover .dropbtn {background-color: #3e8e41;}
+        </style>
+    </head>
+
+
+<!-- BODY FROM HERE ---------------------------------------------------------->
+
+<body>
+
+    <h2>Hoverable Dropdown</h2>
+    <p>Move the mouse over the button to open the dropdown menu.</p>
+    <div class="left-corner">
+        <div class="btn-group">
+                <button class="menu-btn">One for All!
+                    <div class="drop-corner">
+                        <div class="dropdown-content">
+                            <a href="calc.html">Gift Codes</a>
+                        </div>
+                    </div>
+                </button>
+                <button class="menu-btn">Tools
+                    <div class="drop-corner">
+                        <div class="dropdown-content">
+                            <a href="calc.html">Shard Calculator</a>
+                            <a href="#">Stamina Calculator</a>
+                        </div>
+                    </div>
+                </button>
+                <button class="menu-btn">Clans
+                    <div class="drop-corner">
+                        <div class="dropdown-content">
+                            <a href="#">Global</a>
+                            <a href="#">Europe</a>
+                        </div>
+                    </div>
+                </button>
+        </div>
+    </div>
+</body>
+
+
+<!-- BODY END ----------------------------------------------------------->
+
+</html>
