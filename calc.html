@@ -34,7 +34,7 @@
             display: flex;
             flex-direction: column;
             justify-content:center;
-            top: 50px;
+            top: 20px;
             margin: 0 auto;
             padding: 100px 0;
         }
@@ -128,10 +128,11 @@
             <div class="middle">
                 <div class="upper">
                     <form id="frm1">
-                    Next Tier: <input type="text" id="tier_input" value="S" class="input1">
-                    Current Level: <input type="text" id="cur_level" value=17 class="input1">
-                    Shards Inside: <input type="text" id="remaining_shards" value=0 class="input1">
-                    <input type="button" id="calc_btn" value="Calculate!">
+                        <center><h1 style="font-size:42px;">From one tier to the next</h1></center>
+                        Next Tier: <input type="text" id="tier_input" value="S" class="input1">
+                        Current Level: <input type="text" id="cur_level" value=17 class="input1">
+                        Shards Inside: <input type="text" id="remaining_shards" value=0 class="input1">
+                        <input type="button" id="calc_btn" value="Calculate!">
                     </form>
                     
                     <div class="mid_mid">
@@ -142,6 +143,7 @@
 
                 <div class="lower">
                     <form id="frm2">
+                    <center><h2 style="font-size:36px;">From your tier to max (SSS+)</h2></center>
                     Your Tier: <input type="text" id="my_input" value="A" class="input1">
                     Current Level: <input type="text" id="cur_level2" value=0 class="input1">
                     Shards Inside: <input type="text" id="remaining_shards2" value=0 class="input1">
@@ -166,7 +168,7 @@
         </div>
     </main>
 
-    <script type="text/python" src=scripts/main.py></script>
+    <script type="text/python" src=main.py></script>
 
 
   </body>
