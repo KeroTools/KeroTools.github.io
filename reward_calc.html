@@ -1,3 +1,5 @@
+<!-- This app was made for my lazy ass friends that always wanted me to calculate the reward for them -->
+
 <html>
    <head>
       <script>
@@ -32,12 +34,18 @@
       </script>
       <!-- for styling -->
       <style>
+          body{
+              background-color: rgb(0, 0, 0);
+              color: white;
+          }
+        
          .title{
          margin-bottom: 10px;
          text-align:center;
          width: 210px;
          color:rgb(235, 0, 0);
          border: solid black 2px;
+         background-color: white;
          }
   
          input[type="button"]
@@ -57,8 +65,8 @@
       </style>
    </head>
    <!-- create table -->
-   <body>
-      <div class = title> PokeMMO Reward Calculation</div>
+   <body class=body>
+      <div class = title><b>PokeMMO Reward Calculation</b></div>
       <a> Enter the amount each person pays, 
           then your winning position (1, 2, 3, 4) </a>
       <table border="1">
@@ -80,6 +88,8 @@
             <td><input type="button" value="!" /> </td>
          </tr>
       </table>
-      <p id="output"> Amount to pay: </p>
+      <p id="output"><b> Amount to pay: </b></p>
+
+      <img src="img/vi_2.png" style="height:70%; float:right;clear:right;margin-left:20px">
    </body>
 </html>   
