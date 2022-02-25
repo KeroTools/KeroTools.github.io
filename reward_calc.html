@@ -1,0 +1,85 @@
+<html>
+   <head>
+      <script>
+         //function that display value
+
+
+        var Win = {};
+        
+        Win['1'] = 0.75;
+        Win['2'] = 0.15;
+        Win['3'] = 0.08;
+        Win['4'] = 0.02;
+
+        const amount_text = 'Amount to pay: '
+         function reward_calc()
+         {
+            
+            let reward = document.getElementById("reward_amount").value;
+            let spot = document.getElementById("winner_position").value; 
+
+            let r = reward - (reward * Win[spot]);
+            console.log(r)
+            return r;
+         }
+
+         //function that clear the display
+         function main()
+         {
+            let t = document.getElementById("output").value;
+            document.getElementById("output").innerHTML = (amount_text + reward_calc());
+         }
+      </script>
+      <!-- for styling -->
+      <style>
+         .title{
+         margin-bottom: 10px;
+         text-align:center;
+         width: 210px;
+         color:rgb(235, 0, 0);
+         border: solid black 2px;
+         }
+  
+         input[type="button"]
+         {
+         background-color:rgb(255, 93, 17);
+         color: rgb(255, 255, 255);
+         border: solid black 2px;
+         width:100%
+         }
+  
+         input[type="text"]
+         {
+         background-color:white;
+         border: solid black 2px;
+         width:100%
+         }
+      </style>
+   </head>
+   <!-- create table -->
+   <body>
+      <div class = title> PokeMMO Reward Calculation</div>
+      <a> Enter the amount each person pays, 
+          then your winning position (1, 2, 3, 4) </a>
+      <table border="1">
+         <tr>
+            <td colspan="3"><b>Reward Amount</b><input type="text" id="reward_amount"/></td>
+            <!-- clr() function will call clr to clear all value -->
+         </tr>
+         <tr>
+            <td colspan="3"><b>Winner Position</b><input type="text" id="winner_position"/></td>
+            <!-- clr() function will call clr to clear all value -->
+            <td><input type="button" value="Calculate" onclick="main()"/></td>
+         </tr>
+         <tr>
+            <!-- create button and assign value to each button -->
+            <!-- dis("1") will call function dis to display value -->
+            <td><input type="button" value="Vi" /> </td>
+            <td><input type="button" value="Is" /> </td>
+            <td><input type="button" value="Sexy" /> </td>
+            <td><input type="button" value="!" /> </td>
+         </tr>
+      </table>
+      <p id="output"> Amount to pay: </p>
+   </body>
+</html>   
